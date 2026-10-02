@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Soubhagya Saxena — AI/ML Engineer in the Making</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ECEEF7;--surface:#F8F9FD;--ink:#171B3D;--muted:#555B82;--line:#CBD0E6;--accent:#3B39F0;--accent-ink:#fff;--mint:#1FA886;
+  --display:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif;--body:'Figtree','Helvetica Neue',Arial,sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12142B;--surface:#1A1D3B;--ink:#E9EBFA;--muted:#9EA4CE;--line:#2D3160;--accent:#8D8BFF;--accent-ink:#12142B;--mint:#5FE3BE}}
+:root[data-theme="dark"]{--bg:#12142B;--surface:#1A1D3B;--ink:#E9EBFA;--muted:#9EA4CE;--line:#2D3160;--accent:#8D8BFF;--accent-ink:#12142B;--mint:#5FE3BE}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0}
+nav b{font:800 1.1rem var(--display)}
+nav .links{display:flex;gap:1.5rem;font-weight:500;font-size:.95rem}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
+.hero{padding:4rem 0 3rem}
+h1{font:800 clamp(3rem,10.5vw,8rem)/.92 var(--display);letter-spacing:-.035em;margin:0 0 1.5rem}
+.hero p.lede{max-width:34rem;font-size:1.25rem;color:var(--muted);margin:0 0 2rem}
+.lede strong{color:var(--ink);font-weight:600}
+.plot{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:1.25rem;padding:1rem 1rem .5rem;margin-top:2.5rem}
+.plot canvas{width:100%;height:220px;display:block}
+.plot .bar{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.9rem;color:var(--muted);padding:.5rem .25rem .75rem}
+.plot .bar span b{color:var(--ink);font-variant-numeric:tabular-nums}
+button.btn{font:600 .95rem var(--body);background:var(--accent);color:var(--accent-ink);border:0;border-radius:99px;padding:.55rem 1.1rem;cursor:pointer}
+.cta{display:inline-block;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:600;padding:.8rem 1.4rem;border-radius:99px}
+section{padding:4.5rem 0;border-top:1px solid var(--line)}
+h2{font:800 clamp(1.8rem,4vw,2.75rem)/1.05 var(--display);letter-spacing:-.02em;margin:0 0 2rem;max-width:22ch}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.about p{margin:0 0 1rem;max-width:34rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:0;padding:0;list-style:none}
+.chips li{font-size:.9rem;font-weight:500;background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:.3rem .8rem}
+.chips li.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:.25rem 1rem;align-items:baseline;padding:1.4rem 0}
+summary::-webkit-details-marker{display:none}
+summary h3{font:800 clamp(1.5rem,3.4vw,2.25rem)/1.1 var(--display);letter-spacing:-.015em;margin:0}
+summary .tag{color:var(--muted);font-size:.95rem}
+summary::after{content:"+";grid-row:1;grid-column:2;font:500 2rem/1 var(--display);color:var(--accent);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+summary:hover h3{color:var(--accent)}
+.body{padding:0 0 1.75rem;max-width:40rem;color:var(--muted)}
+.body p{margin:0 0 .9rem}
+.body ul{margin:0 0 1rem;padding-left:1.1rem}
+.stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2rem 3rem}
+.stack h3{font:600 .95rem var(--body);color:var(--muted);margin:0 0 .75rem}
+.stack p{margin:0;font-weight:500}
+.loop{display:flex;flex-wrap:wrap;gap:.5rem .75rem;align-items:center;font:800 clamp(1.4rem,3.6vw,2.4rem)/1.2 var(--display);letter-spacing:-.015em}
+.loop i{font-style:normal;color:var(--accent)}
+.loop-note{color:var(--muted);max-width:36rem;margin-top:1.25rem}
+.contact a.mail{font:800 clamp(1.4rem,4.5vw,3rem)/1.1 var(--display);letter-spacing:-.02em;text-decoration:none;border-bottom:3px solid var(--accent);word-break:break-all}
+.contact .row{display:flex;gap:1.5rem;margin-top:1.75rem;flex-wrap:wrap}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+.hero h1,.hero .lede{animation:in .8s cubic-bezier(.2,.7,.2,1) both}.hero .lede{animation-delay:.15s}
+@keyframes in{from{opacity:0;transform:translateY(14px)}}
+@media (max-width:720px){.about{grid-template-columns:1fr;gap:2rem}nav .links{gap:1rem}section{padding:3.25rem 0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main"><b>SS</b><div class="links"><a href="#work">Projects</a><a href="#stack">Stack</a><a href="#contact">Contact</a></div></nav>
+
+  <header class="hero">
+    <h1>Soubhagya Saxena</h1>
+    <p class="lede"><strong>B.Tech AI &amp; ML student building toward AI engineering.</strong> I want to understand AI, not just use it, and build complete systems from data and models to deployed applications.</p>
+    <a class="cta" href="#work">See my projects</a>
+
+    <div class="plot" role="img" aria-label="Animated training loss curve falling over 60 epochs">
+      <canvas id="c"></canvas>
+      <div class="bar">
+        <span>Epoch <b id="ep">0</b> / 60</span>
+        <span>Loss <b id="ls">1.000</b></span>
+        <button class="btn" id="rt" type="button">Train again</button>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="about">
+      <div>
+        <h2>From “can this be built?” to “let’s build it.”</h2>
+      </div>
+      <div>
+        <p>I started with programming and moved into machine learning, deep learning and intelligent applications. I’m studying B.Tech in Artificial Intelligence &amp; Machine Learning at K.R. Mangalam University.</p>
+        <p>I’m not trying to learn every technology at once. I’m building the fundamentals that let me create with AI instead of only consuming it.</p>
+        <ul class="chips" aria-label="Interests">
+          <li>Machine Learning</li><li>Deep Learning</li><li>Computer Vision</li><li class="on">NLP &amp; LLMs</li><li>RAG systems</li><li>AI agents</li><li>AI automation</li><li>Production AI</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>Things I’ve built</h2>
+    <details open>
+      <summary><h3>Jarvis AI Assistant</h3><span class="tag">Python · AI · Automation</span></summary>
+      <div class="body"><p>A personal assistant that goes beyond conversation. It takes voice in, processes it with AI, remembers context and acts on it.</p><p>The long-term goal: an assistant that understands context, learns from interactions and performs useful tasks.</p></div>
+    </details>
+    <details>
+      <summary><h3>EduFlow</h3><span class="tag">React · Vite · Tailwind · Context API</span></summary>
+      <div class="body"><p>A modern learning management system interface with a clean, organized experience for students.</p>
+        <ul><li>Course discovery, search and filtering</li><li>Student dashboard and profile management</li><li>Protected routes and authentication UI</li><li>Dark mode, reusable components, lazy loading</li></ul></div>
+    </details>
+    <details>
+      <summary><h3>CampusLink</h3><span class="tag">Python · Flask · JSON database · QR</span></summary>
+      <div class="body"><p>A maintenance and ticketing system for universities. Students report infrastructure issues by scanning a QR code, and the backend keeps each report as structured data.</p></div>
+    </details>
+    <details>
+      <summary><h3>Study-Buddy Matcher</h3><span class="tag">Python · Cosine similarity</span></summary>
+      <div class="body"><p>Matches students with compatible study partners. It compares subjects, attendance and preferences, then uses cosine similarity to find the closest academic profiles.</p></div>
+    </details>
+    <details>
+      <summary><h3>Machine Learning experiments</h3><span class="tag">Pandas · NumPy · Scikit-learn</span></summary>
+      <div class="body"><p>Hands-on supervised learning, covering regression on California Housing and classification on Breast Cancer data.</p>
+        <ul><li>Linear and Logistic Regression, Random Forest</li><li>Cross-validation and hyperparameter tuning</li><li>MSE, RMSE, R² and classification metrics</li></ul></div>
+    </details>
+    <details>
+      <summary><h3>Deep learning experiments</h3><span class="tag">TensorFlow · Keras · PyTorch</span></summary>
+      <div class="body"><p>Neural networks, RNNs, LSTMs and GRUs, NLP pipelines and image classification. The aim is to understand what happens inside the models, not only to train them.</p></div>
+    </details>
+  </section>
+
+  <section id="stack">
+    <h2>What I work with</h2>
+    <div class="stack">
+      <div><h3>Programming</h3><p>Python, Java, JavaScript, SQL</p></div>
+      <div><h3>AI / ML</h3><p>Scikit-learn, TensorFlow, Keras, PyTorch</p></div>
+      <div><h3>Data</h3><p>NumPy, Pandas, Matplotlib</p></div>
+      <div><h3>Web</h3><p>React, Vite, Tailwind CSS, Flask, REST APIs</p></div>
+      <div><h3>Tools</h3><p>Git, GitHub, VS Code, Jupyter</p></div>
+      <div><h3>Exploring now</h3><p>LLMs, RAG, LangGraph, AI agents, MLOps</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How I learn</h2>
+    <div class="loop" aria-label="Learn, build, break, debug, understand, build better"><span>Learn</span><i>→</i><span>Build</span><i>→</i><span>Break</span><i>→</i><span>Debug</span><i>→</i><span>Understand</span><i>→</i><span>Build better</span></div>
+    <p class="loop-note">Every error is a chance to see what’s happening underneath the abstraction.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Open to internships, collaboration and open-source.</h2>
+    <a class="mail" href="mailto:soubhagyasaxena47@gmail.com">soubhagyasaxena47@gmail.com</a>
+    <div class="row">
+      <a href="https://github.com/soubhagyasaxena-ai" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/soubhagya-saxena-09523735a" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>Building intelligent systems today for the problems of tomorrow.</footer>
+</div>
+
+<script>
+(function(){
+  var cv=document.getElementById('c'),ctx=cv.getContext('2d'),ep=document.getElementById('ep'),ls=document.getElementById('ls');
+  var N=60,pts=[],raf,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function gen(){pts=[];var s=Math.random()*10;for(var i=0;i<=N;i++){var n=Math.sin(i*1.7+s)*0.05*Math.exp(-i/25)+(Math.random()-.5)*0.04*Math.exp(-i/30);pts.push(Math.max(0.03,0.08+0.92*Math.exp(-i/11)+n))}}
+  function col(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+  function draw(k){
+    var r=devicePixelRatio||1,w=cv.clientWidth,h=cv.clientHeight;cv.width=w*r;cv.height=h*r;ctx.setTransform(r,0,0,r,0,0);ctx.clearRect(0,0,w,h);
+    var p=8,X=function(i){return p+i/N*(w-2*p)},Y=function(v){return p+(1-v)*(h-2*p)};
+    ctx.strokeStyle=col('--line');ctx.lineWidth=1;
+    for(var g=0;g<=4;g++){var y=p+g/4*(h-2*p);ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke()}
+    var last=Math.floor(k);
+    ctx.beginPath();ctx.moveTo(X(0),Y(pts[0]));for(var i=1;i<=last;i++)ctx.lineTo(X(i),Y(pts[i]));
+    ctx.strokeStyle=col('--accent');ctx.lineWidth=3;ctx.lineJoin='round';ctx.stroke();
+    ctx.beginPath();ctx.arc(X(last),Y(pts[last]),6,0,7);ctx.fillStyle=col('--mint');ctx.fill();
+    ep.textContent=last;ls.textContent=pts[last].toFixed(3);
+  }
+  function run(){cancelAnimationFrame(raf);gen();if(reduce){draw(N);return}var t0=performance.now();
+    (function f(t){var k=Math.min(N,(t-t0)/2800*N);draw(k);if(k<N)raf=requestAnimationFrame(f)})(t0)}
+  document.getElementById('rt').onclick=run;
+  addEventListener('resize',function(){draw(parseInt(ep.textContent,10)||0)});
+  run();
+})();
+</script>
+</body>
+</html>
